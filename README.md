@@ -126,7 +126,7 @@ Set up (the latest version of) [HAProxy](http://www.haproxy.org/) in Ubuntu syst
 * `haproxy_frontend.{n}.http_request.{n}.action`: [required]: The rules action (e.g. `add-header`)
 * `haproxy_frontend.{n}.http_request.{n}.param`: [optional]: The complete line to be added (e.g. `X-Forwarded-Proto https`)
 * `haproxy_frontend.{n}.http_request.{n}.cond`: [optional]: A matching condition built from ACLs (e.g. `if { ssl_fc }`)
-* `haproxy_frontend.{n}.http_response`: [optional]: Access control for Layer 7 responses
+* `haproxy_frontend.{n}.http_response`: [optional]: Access control for Layer 7 responses (e.g. `content captureparam req.ssl_sni len 50`)
 * `haproxy_frontend.{n}.http_response.{n}.action`: [required]: The rules action (e.g. `del-header`)
 * `haproxy_frontend.{n}.http_response.{n}.param`: [optional]: The complete line to be added (e.g. `X-Varnish`)
 * `haproxy_frontend.{n}.http_response.{n}.cond`: [optional]: A matching condition built from ACLs
